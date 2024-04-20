@@ -1,4 +1,5 @@
 import React from 'react'
+import '../'
 import Card from '../Components/Card';
 import Top from '../Components/Top';
 import Bottom from '../Components/Bottom';
