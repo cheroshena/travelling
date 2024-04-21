@@ -330,3 +330,61 @@ font-family: Poppins;
 .view-all-trans.animated {
   animation: pulse 1s infinite;
 }
+
+/* Bottom */
+.footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 30px 0; /* Add padding */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: #fff; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* About Us */
+.about-us {
+  padding: 20px;
+  background: linear-gradient(135deg, #2980b9, #2c3e50);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.about-us h2 {
+  color: #333;
+}
+
+.about-us p {
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.big-letter{
+  font-size: 32px;
+}
+/* You can add more styling as needed */

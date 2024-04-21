@@ -71,33 +71,40 @@ function Home() {
             </h1>
           </div>
           <div className='card-items-trans'>
-              {/* Only display the first 'visibleCards' number of cards */}
-              {[...Array(visibleCards)].map((_, index) => (
-                <Card key={index} />
-              ))}
-            </div>
-            <div className='Button-view-all'>
-              {/* Show the 'Load More' button if there are more than 3 cards */}
-              {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickAcco}>Load More</button> : null}
-            </div>
+            {/* Only display the first 'visibleCards' number of cards */}
+            {[...Array(visibleCards)].map((_, index) => (
+              <Card key={index} />
+            ))}
+          </div>
+          <div className='Button-view-all'>
+            {/* Show the 'Load More' button if there are more than 3 cards */}
+            {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickAcco}>Load More</button> : null}
+          </div>
         </div>
         <div className='destination-wrapper'>
-        <div className='title-trans'>
+          <div className='title-trans'>
             <h1>
               Destinations
             </h1>
           </div>
           <div className='card-items-trans'>
-              {/* Only display the first 'visibleCards' number of cards */}
-              {[...Array(visibleCards)].map((_, index) => (
-                <Card key={index} />
-              ))}
-            </div>
-            <div className='Button-view-all'>
-              {/* Show the 'Load More' button if there are more than 3 cards */}
-              {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickDest}>Load More</button> : null}
-            </div>
+            {/* Only display the first 'visibleCards' number of cards */}
+            {[...Array(visibleCards)].map((_, index) => (
+              <Card key={index} />
+            ))}
+          </div>
+          <div className='Button-view-all'>
+            {/* Show the 'Load More' button if there are more than 3 cards */}
+            {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickDest}>Load More</button> : null}
+          </div>
 
+        </div>
+        <div className='about-wrapper'>
+        <div className='title-trans'>
+            <h1>
+              About Us
+            </h1>
+          </div>
         </div>
       </div>
 
