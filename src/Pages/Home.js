@@ -18,8 +18,19 @@ function Home() {
   //   setVisibleCards(prevCount => Math.min(prevCount + 3, totalCards)); // Increase the number of visible cards by 3, but not more than totalCards
   // };
 
+  // Transportation page
   const handleViewAllClickTrans = () => {
     window.location.href = "/transportation";
+  };
+
+  // Accomadation page
+  const handleViewAllClickAcco = () => {
+    window.location.href = "/accomadation";
+  };
+
+  // destination page
+  const handleViewAllClickDest = () => {
+    window.location.href = "/destination";
   };
 
   return (
@@ -36,23 +47,60 @@ function Home() {
           <button>Get Started</button>
         </div>
       </div>
-      <div className='transportation-wrapper'>
-        <div className='title-trans'>
-          <h1>Transportation</h1>
-          <div className='card-items-trans'>
-            {/* Only display the first 'visibleCards' number of cards */}
-            {[...Array(visibleCards)].map((_, index) => (
-              <Card key={index} />
-            ))}
-          </div>
-          <div className='Button-view-all'>
-            {/* Show the 'Load More' button if there are more than 3 cards */}
-            {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickTrans}>Load More</button> : null}
+
+      <div className='home-body'>
+        <div className='transportation-wrapper'>
+          <div className='title-trans'>
+            <h1>Transportation</h1>
+            <div className='card-items-trans'>
+              {/* Only display the first 'visibleCards' number of cards */}
+              {[...Array(visibleCards)].map((_, index) => (
+                <Card key={index} />
+              ))}
+            </div>
+            <div className='Button-view-all'>
+              {/* Show the 'Load More' button if there are more than 3 cards */}
+              {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickTrans}>Load More</button> : null}
+            </div>
           </div>
         </div>
+        <div className='accommodation-wrapper'>
+          <div className='title-trans'>
+            <h1>
+              Accommodation
+            </h1>
+          </div>
+          <div className='card-items-trans'>
+              {/* Only display the first 'visibleCards' number of cards */}
+              {[...Array(visibleCards)].map((_, index) => (
+                <Card key={index} />
+              ))}
+            </div>
+            <div className='Button-view-all'>
+              {/* Show the 'Load More' button if there are more than 3 cards */}
+              {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickAcco}>Load More</button> : null}
+            </div>
+        </div>
+        <div className='destination-wrapper'>
+        <div className='title-trans'>
+            <h1>
+              Destinations
+            </h1>
+          </div>
+          <div className='card-items-trans'>
+              {/* Only display the first 'visibleCards' number of cards */}
+              {[...Array(visibleCards)].map((_, index) => (
+                <Card key={index} />
+              ))}
+            </div>
+            <div className='Button-view-all'>
+              {/* Show the 'Load More' button if there are more than 3 cards */}
+              {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickDest}>Load More</button> : null}
+            </div>
+
+        </div>
       </div>
-      <Accomadations />
-      <Destinations />
+
       <AboutUs />
       <Gallery />
     </div>

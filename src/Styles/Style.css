@@ -128,7 +128,7 @@ font-family: Poppins;
 
 .home-content button {
   padding: 10px 20px; 
-  background-color: #007bff; 
+  background-color: #1f1f1f; 
   color: #fff; 
   font-size: 1rem; 
   border: none; 
@@ -138,7 +138,11 @@ font-family: Poppins;
 }
 
 .home-content button:hover {
-  background-color: #0056b3; 
+  background-color: #3d3d3d; 
+}
+
+.home-body{
+  margin: 25px;
 }
 
 /* Transportation Area (Home) */
