@@ -1,5 +1,8 @@
 import React from 'react'
 import image1 from '../assets/b-img-2.jpg'
+import Car from '../assets/car.png'
+import Hotel from '../assets/hotel.png'
+import Walking from '../assets/walking.png'
 
 
 function Card() {
@@ -24,21 +27,30 @@ function Card() {
       <div className="card-body">
 
         <div className="image-group">
-          <img src={image1}/>
+          <img className='icon-card' src={Hotel} />
           <h3>2 Hotel</h3>
         </div>
         <div className="image-group">
-          <img src={image1}/>
+          <img src={Car} />
           <h3>1 Transfers</h3>
         </div>
         <div className="image-group">
-          <img src={image1}/>
+          <img src={Walking} />
           <h3>4 Activites</h3>
         </div>
 
-        <div className='card-guidlines'>
 
-        </div>
+
+      </div>
+      <div className='card-guidlines'>
+        <ul>
+          <li>Long title or description should not affect card width</li>
+          <li>Card height should remain consistent</li>
+          <li>New solution needed to prevent card resizing</li>
+        </ul>
+      </div>
+      <div className='price-card'>
+      $12,000  <span className="label-price">Per Adult</span>
       </div>
     </div>
   )

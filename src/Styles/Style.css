@@ -160,26 +160,29 @@ font-family: Poppins;
 }
 
 /* Card.css */
+/* Card.css */
 .card {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 20px;
+  max-width: 400px; /* Set maximum width for the card */
+  min-width: 300px; /* Set minimum width for the card */
 }
 
 .card-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .card-header img {
-  width: 400px;
+  max-width: 100%; /* Ensure image doesn't exceed its container */
   height: auto;
   border-radius: 15px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .title-rating {
@@ -187,19 +190,23 @@ font-family: Poppins;
   display: flex;
   flex-direction: row; /* Align items in a column */
   justify-content: space-between;
+  max-width: 96%; /* Set maximum width for the title and rating */
 }
 
 .title-rating h2 {
   font-size: 18px;
   color: #333;
-  font-weight: 500;
+  font-weight: 600;
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Display ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .rating {
   display: flex;
   flex-direction: row;
   align-items: center;
-
+ 
 }
 
 .rating .star {
@@ -208,37 +215,72 @@ font-family: Poppins;
   margin-right: 12px;
 }
 
-.rating .rating-number{
+.rating .rating-number {
   color: #000000;
   font-size: 20px;
   font-weight: 600;
 }
 
-.card-middle{
+.card-middle {
   margin-top: -40px;
+  margin-bottom: 30px;
 }
 
 .card-body {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  
 }
 
 .image-group {
   text-align: center;
-  margin: 15px;
+  margin-inline: 39px;
 }
 
 .image-group img {
-  width: 100px;
+  width: 28px;
   height: auto;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .image-group h3 {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
+  font-weight: 400;
+}
+
+.icon-card {
+  height: 12px;
+  width: auto;
+}
+
+.card-guidlines{
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.card-guidlines li{
+  margin-bottom: 7px;
+  color: #3f3f3f;
+}
+
+.price-card{
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  align-items: flex-end;
+  justify-content: center;
+  font-weight: 500;
+  color: #5a5a5a;
+  
+
+}
+
+.label-price{
+  font-size: 12px;
+  color: #414141;
+  margin-left: 5px;
 }

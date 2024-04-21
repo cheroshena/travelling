@@ -22,8 +22,6 @@ function Home() {
         <span className="dot">.</span>Explore
         <span className="dot">.</span>Rest
         </h1>
-        
-          <p>This is a paragraph describing your website or company.</p>
           <button>Get Started</button>
         </div>
       </div>
@@ -38,15 +36,10 @@ function Home() {
           
         </div>
       </div>
-      <Transportation />
-      
-      <Accomadations />
-      
+      <Accomadations /> 
       <Destinations />
-      
       <AboutUs />
       <Gallery />
-      
     </div>
   )
 }
