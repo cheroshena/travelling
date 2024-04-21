@@ -102,13 +102,13 @@ function Home() {
         <div className='about-wrapper'>
         <div className='title-trans'>
             <h1>
-              About Us
+            <AboutUs />
             </h1>
           </div>
         </div>
       </div>
 
-      <AboutUs />
+      
       <Gallery />
     </div>
   )
