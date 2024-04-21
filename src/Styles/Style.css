@@ -284,3 +284,45 @@ font-family: Poppins;
   color: #414141;
   margin-left: 5px;
 }
+
+.Button-view-all{
+  display: flex;
+  justify-content: center;
+}
+.view-all-trans{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #181818;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-all-trans:hover {
+  background-color: #9c9c9c;
+  color: #000000;
+}
+
+.view-all-trans:active {
+  transform: translateY(2px);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.view-all-trans.animated {
+  animation: pulse 1s infinite;
+}

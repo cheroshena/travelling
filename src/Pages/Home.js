@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Styles/Style.css'
 import Card from '../Components/Card';
 import AboutUs from '../Base/AboutUs';
@@ -11,17 +11,28 @@ import Top from '../Components/Top';
 
 
 function Home() {
+  const [visibleCards, setVisibleCards] = useState(3); // State to manage the number of visible cards
+  const totalCards = 4; // Total number of cards available
+
+  // const loadMoreCards = () => {
+  //   setVisibleCards(prevCount => Math.min(prevCount + 3, totalCards)); // Increase the number of visible cards by 3, but not more than totalCards
+  // };
+
+  const handleViewAllClickTrans = () => {
+    window.location.href = "/transportation";
+  };
+
   return (
 
     <div className='home-wrapper'>
       <div className='home-image'>
         <img src={Backimgone} alt='' />
         <div className='home-content'>
-        <h1>
-        <span className="dot">.</span>Plan 
-        <span className="dot">.</span>Explore
-        <span className="dot">.</span>Rest
-        </h1>
+          <h1>
+            <span className="dot">.</span>Plan
+            <span className="dot">.</span>Explore
+            <span className="dot">.</span>Rest
+          </h1>
           <button>Get Started</button>
         </div>
       </div>
@@ -29,14 +40,18 @@ function Home() {
         <div className='title-trans'>
           <h1>Transportation</h1>
           <div className='card-items-trans'>
-          <Card />
-          <Card />
-          <Card />
+            {/* Only display the first 'visibleCards' number of cards */}
+            {[...Array(visibleCards)].map((_, index) => (
+              <Card key={index} />
+            ))}
           </div>
-          
+          <div className='Button-view-all'>
+            {/* Show the 'Load More' button if there are more than 3 cards */}
+            {visibleCards < totalCards ? <button className='view-all-trans' onClick={handleViewAllClickTrans}>Load More</button> : null}
+          </div>
         </div>
       </div>
-      <Accomadations /> 
+      <Accomadations />
       <Destinations />
       <AboutUs />
       <Gallery />
