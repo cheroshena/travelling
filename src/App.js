@@ -8,6 +8,8 @@ import Transportation from "./Base/Transportaion";
 import Accomadations from "./Base/Accomadations";
 import Contact from "./Base/Contact";
 import Gallery from "./Base/Gallery";
+import Top from "./Components/Top";
+import Bottom from "./Components/Bottom";
 
 
 
@@ -16,20 +18,21 @@ import Gallery from "./Base/Gallery";
 function App() {
   return (
     <div className="App">
+      <Top />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<AboutUs/>}/>
-          <Route path="/destination" element={<Destinations/>}/>
-          <Route path="/transportation" element={<Transportation/>}/>
-          <Route path="/accomadation" element={<Accomadations/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/gallery" element={<Gallery/>}/>
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/destination" element={<Destinations />} />
+          <Route path="/transportation" element={<Transportation />} />
+          <Route path="/accomadation" element={<Accomadations />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </BrowserRouter>
-
+      <Bottom />
     </div>
   );
 }
