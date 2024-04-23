@@ -10,8 +10,9 @@ function Top() {
       <div className='nav-bar-item'>
         <nav id='navbar'>
           <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/transportation">Transportation</a></li>
+            <li><a href="/destination">Destination</a></li>
+            <li><a href="/accomadation">Accommodation</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a className='login-btn' href="/login">Login</a></li>
           </ul>

@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
 import { EffectCoverflow,Pagination,Navigation } from 'swiper/modules';
 import slide_image_1 from '../assets/img-1.jpg';
 import slide_image_2 from '../assets/img-2.jpg';
@@ -15,11 +12,10 @@ import slide_image_4 from '../assets/img-4.jpg';
 import slide_image_5 from '../assets/img-5.jpg';
 import slide_image_6 from '../assets/img-6.jpg';
 import slide_image_7 from '../assets/img-7.jpg';
+
 function Gallery() {
   
-  
   return (
-
     <div>
       <Swiper
       effect={'coverflow'}
