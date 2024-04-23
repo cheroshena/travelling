@@ -6,7 +6,7 @@ function Transportation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [showAllCards, setShowAllCards] = useState(false);
   const initialCardCount = 3; // Default number of cards to show initially
-  const totalCount = 3; // Total number of cards available
+  const totalCount = 7; // Total number of cards available
 
   const [cardCount, setCardCount] = useState(initialCardCount);
 
