@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
-import Backimgone from '../assets/b-img-5.jpg'
+import React, { useState } from 'react';
+import Backimgone from '../assets/b-img-5.jpg';
+import CardLocation from '../Components/CardLoacation';
 
 function Transportation() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showAllCards, setShowAllCards] = useState(false);
+  const initialCardCount = 3; // Default number of cards to show initially
+  const totalCount = 3; // Total number of cards available
+
+  const [cardCount, setCardCount] = useState(initialCardCount);
 
   const handleChange = (e) => {
     setSearchQuery(e.target.value);
@@ -10,22 +16,30 @@ function Transportation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     console.log(searchQuery);
-
     setSearchQuery('');
   };
 
-  return (
+  const handleLoadMore = () => {
+    setShowAllCards(true);
+    setCardCount(totalCount); // Set card count to total count when loading more
+  };
 
-    <div><div className='home-image'>
-      <img src={Backimgone} alt='' />
-      <div className='home-content'>
-        <h1>
-          <span className="dot">.</span>Transportation
-        </h1>
+  const handleLoadLess = () => {
+    setShowAllCards(false);
+    setCardCount(initialCardCount); // Reset card count to initial count when loading less
+  };
+
+  return (
+    <div className='trans-page-wrappper'>
+      <div className='home-image'>
+        <img src={Backimgone} alt='' />
+        <div className='home-content'>
+          <h1>
+            <span className="dot">.</span>Transportation
+          </h1>
+        </div>
       </div>
-    </div>
       <form className="search-container" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -33,14 +47,30 @@ function Transportation() {
           placeholder="Enter your journey point"
           value={searchQuery}
           onChange={handleChange}
-
         />
         <button type="submit" className="search-button">
           Search
         </button>
       </form>
+      <div className='location-card-container'>
+        {[...Array(cardCount)].map((_, index) => (
+          <CardLocation key={index} />
+        ))}
+      </div>
+      <div className='load-more-btn-wrapper'>
+      {!showAllCards ? (
+        <button onClick={handleLoadMore} className="load-button">
+          Load More ({totalCount - initialCardCount} more)
+        </button>
+      ) : (
+        <button onClick={handleLoadLess} className="load-button">
+          Load Less
+        </button>
+      )}
+      </div>
+      
     </div>
-  )
+  );
 }
 
 export default Transportation;
