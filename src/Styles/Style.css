@@ -485,4 +485,37 @@ a:hover {
   }
 }
 
+/* Search Bar */
+
+.search-container {
+  display: flex;
+  max-width: 70%;
+  justify-content: center; 
+  align-items: center; 
+  margin: 20px auto;
+}
+
+.search-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px 0 0 10px;
+  font-size: 12px;
+  background-color: rgb(211, 211, 211);
+}
+
+.search-button {
+  height: 39.5px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #555;
+}
 
