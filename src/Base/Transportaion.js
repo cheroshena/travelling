@@ -42,8 +42,9 @@ function Transportation() {
       { id: 2, title: 'Card 2' },
       { id: 3, title: 'Card 3' },
       { id: 4, title: 'Card 4' },
-      { id: 5, title: 'Card 5' },
-      
+     
+
+
 
     ];
     setCards(sampleData);
@@ -89,11 +90,42 @@ function Transportation() {
         )}
       </div>
 
-      <div className='own-cards-area'>
-        {cards.map((card) => (
-          <Card key={card.id} title={card.title} className="card" />
-        ))}
+      <h4 className='sub-title-one'>
+        Vehicle Renting
+      </h4>
+      <div className='own-card-area'>
+
+        <div className='own-cards-area'>
+          {cards.map((card) => (
+            <Card key={card.id} title={card.title} className="card" />
+          ))}
+        </div>
       </div>
+
+      <h4 className='sub-title-one'>
+        Cab Services
+      </h4>
+      <div className='own-card-area'>
+
+        <div className='own-cards-area'>
+          {cards.map((card) => (
+            <Card key={card.id} title={card.title} className="card" />
+          ))}
+        </div>
+      </div>
+
+      <h4 className='sub-title-one'>
+        Public Transportation
+      </h4>
+      <div className='own-card-area'>
+
+        <div className='own-cards-area'>
+          {cards.map((card) => (
+            <Card key={card.id} title={card.title} className="card" />
+          ))}
+        </div>
+      </div>
+
 
     </div>
   );
