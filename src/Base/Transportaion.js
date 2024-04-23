@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Backimgone from '../assets/b-img-5.jpg';
 import CardLocation from '../Components/CardLoacation';
+import Card from '../Components/Card';
+
 
 function Transportation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [showAllCards, setShowAllCards] = useState(false);
   const initialCardCount = 3; // Default number of cards to show initially
   const totalCount = 7; // Total number of cards available
+
 
   const [cardCount, setCardCount] = useState(initialCardCount);
 
@@ -29,6 +32,23 @@ function Transportation() {
     setShowAllCards(false);
     setCardCount(initialCardCount); // Reset card count to initial count when loading less
   };
+
+  const [cards, setCards] = useState([]); // State to store fetched cards
+
+  useEffect(() => {
+
+    const sampleData = [
+      { id: 1, title: 'Card 1' },
+      { id: 2, title: 'Card 2' },
+      { id: 3, title: 'Card 3' },
+      { id: 4, title: 'Card 4' },
+      { id: 5, title: 'Card 5' },
+      
+
+    ];
+    setCards(sampleData);
+  }, []); // Fetch data only once when component mounts
+
 
   return (
     <div className='trans-page-wrappper'>
@@ -58,17 +78,23 @@ function Transportation() {
         ))}
       </div>
       <div className='load-more-btn-wrapper'>
-      {!showAllCards ? (
-        <button onClick={handleLoadMore} className="load-button">
-          Load More ({totalCount - initialCardCount} more)
-        </button>
-      ) : (
-        <button onClick={handleLoadLess} className="load-button">
-          Load Less
-        </button>
-      )}
+        {!showAllCards ? (
+          <button onClick={handleLoadMore} className="load-button">
+            Load More ({totalCount - initialCardCount} more)
+          </button>
+        ) : (
+          <button onClick={handleLoadLess} className="load-button">
+            Load Less
+          </button>
+        )}
       </div>
-      
+
+      <div className='own-cards-area'>
+        {cards.map((card) => (
+          <Card key={card.id} title={card.title} className="card" />
+        ))}
+      </div>
+
     </div>
   );
 }

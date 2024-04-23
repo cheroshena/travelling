@@ -11,6 +11,7 @@ import Top from '../Components/Top';
 
 
 function Home() {
+  
   const [visibleCards, setVisibleCards] = useState(3); // State to manage the number of visible cards
   const totalCards = 4; // Total number of cards available
 
