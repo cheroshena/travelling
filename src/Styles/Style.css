@@ -614,5 +614,5 @@ a:hover {
 }
 
 .own-cards-area .card {
-  width: 100%; /* Make each card fill the grid cell */
+  width: 100%; 
 }
