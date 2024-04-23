@@ -35,20 +35,10 @@ function Register () {
 
               <div className="signin115">Sign up</div>
             </div>
-            or
-            <div className="signin12">
-              <img src={Google} width="15%" className="logosignin" alt="aaa" />
-              SIgn in with google
-            </div>
-            <div className="signin13">
-              <img
-                src={Facebook}
-                width="15%"
-                className="logosignin"
-                alt="aaa"
-              />
-              signin with facebook
-            </div>
+           
+
+
+           
             <div className="signin14">
               you have an account?{" "}
               <Link
