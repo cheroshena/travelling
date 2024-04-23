@@ -42,10 +42,7 @@ function Transportation() {
       { id: 2, title: 'Card 2' },
       { id: 3, title: 'Card 3' },
       { id: 4, title: 'Card 4' },
-     
-
-
-
+      
     ];
     setCards(sampleData);
   }, []); // Fetch data only once when component mounts

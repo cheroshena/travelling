@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Backimgone from '../assets/b-img-4.jpg'
 import CardLocation from '../Components/CardLoacation';
-
+import Card from '../Components/Card';
 
 function Destinations() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,6 +30,20 @@ function Destinations() {
     setShowAllCards(false);
     setCardCount(initialCardCount); // Reset card count to initial count when loading less
   };
+
+  const [cards, setCards] = useState([]); // State to store fetched cards
+
+  useEffect(() => {
+
+    const sampleData = [
+      { id: 1, title: 'Card 1' },
+      { id: 2, title: 'Card 2' },
+      { id: 3, title: 'Card 3' },
+      { id: 4, title: 'Card 4' },
+
+    ];
+    setCards(sampleData);
+  }, []); // Fetch data only once when component mounts
 
   return (
 
@@ -70,6 +84,41 @@ function Destinations() {
           Load Less
         </button>
       )}
+      </div>
+      <h4 className='sub-title-one'>
+        Vehicle Renting
+      </h4>
+      <div className='own-card-area'>
+
+        <div className='own-cards-area'>
+          {cards.map((card) => (
+            <Card key={card.id} title={card.title} className="card" />
+          ))}
+        </div>
+      </div>
+
+      <h4 className='sub-title-one'>
+        Cab Services
+      </h4>
+      <div className='own-card-area'>
+
+        <div className='own-cards-area'>
+          {cards.map((card) => (
+            <Card key={card.id} title={card.title} className="card" />
+          ))}
+        </div>
+      </div>
+
+      <h4 className='sub-title-one'>
+        Public Transportation
+      </h4>
+      <div className='own-card-area'>
+
+        <div className='own-cards-area'>
+          {cards.map((card) => (
+            <Card key={card.id} title={card.title} className="card" />
+          ))}
+        </div>
       </div>
     </div>
   )
