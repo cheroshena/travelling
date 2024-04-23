@@ -370,6 +370,9 @@ a:hover {
 .about-wrapper{
   display: flex;
   align-items: center;
+  margin-top: 20px;
+  width: 100%;
+ 
 }
 .about-us {
   padding: 20px;
@@ -386,6 +389,7 @@ a:hover {
   color: #ffffff;
   line-height: 1.6;
   font-size: 16px;
+  padding-inline: 190px;
 }
 
 .big-letter{
@@ -393,16 +397,24 @@ a:hover {
 }
 
 
-/* You can add more styling as needed */
+/* Gallery */
+.gallery-wrapper {
+  margin-top: 40px;
+}
 .swiper {
   width: 50%;
   height: 50%;
+  margin-top: 141px;
+  margin-bottom: 154px;
+}
+.swiper-wrapper{
+  width: 33% !important;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+
 
   /* Center slide text vertically */
   display: flex;
@@ -415,4 +427,14 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
+
+.slider-controler{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+

@@ -100,16 +100,26 @@ function Home() {
 
         </div>
         <div className='about-wrapper'>
-        <div className='title-trans'>
+          <div className='title-trans'>
             <h1>
-            <AboutUs />
+              About Us
             </h1>
+            <AboutUs />
+          </div>
+        </div>
+        <div className='gallery-wrapper'>
+          <div className='title-trans'>
+            <h1>
+              Gallery
+            </h1>
+            <Gallery />
           </div>
         </div>
       </div>
 
-      
-      <Gallery />
+
+
+
     </div>
   )
 }
