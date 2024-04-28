@@ -10,6 +10,8 @@ import Contact from "./Base/Contact";
 import Gallery from "./Base/Gallery";
 import Top from "./Components/Top";
 import Bottom from "./Components/Bottom";
+import QuestionPage from "./Pages/QuestionPage";
+
 
 
 
@@ -30,6 +32,7 @@ function App() {
           <Route path="/accomadation" element={<Accomadations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/questionPage" element={< QuestionPage/>} />
         </Routes>
       </BrowserRouter>
       <Bottom />

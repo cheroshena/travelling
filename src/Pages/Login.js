@@ -4,7 +4,7 @@ import Loginart from "../assets/Loginart.png";
 import Google from "../assets/Google.png";
 import Facebook from "../assets/Facebook.png";
 
-function Login () {
+function Login() {
   return (
     <div className="signin">
       <div className="signin0">
@@ -17,40 +17,40 @@ function Login () {
                 start managing your projects.
               </div>
               <div className="signin113">
-                Email
+                <label htmlFor="email">Email</label>
                 <input
-                  name="myInput"
+                  type="email"
+                  id="email"
+                  name="email"
                   placeholder="Example@email.com"
                   className="signinput"
                 />
               </div>
               <div className="signin113">
-                Password
+                <label htmlFor="password">Password</label>
                 <input
-                  name="myInput"
+                  type="password"
+                  id="password"
+                  name="password"
                   placeholder="at least 8 characters"
                   className="signinput"
                 />
-                <div className="signin114">Forget password?</div>
+                <Link to="/forgot-password" className="signin114">Forgot password?</Link>
               </div>
 
-              <div className="signin115">Sign in</div>
+              <button className="signin115">Sign in</button>
             </div>
-           
+
             <div className="signin14">
-              Don't you have an account?{" "}
-              <Link
-                to="/signup"
-                className="sss"
-                style={{ textDecoration: "none" }}
-              >
-                Sign up
+              <span>Don't you have an account? </span>
+              <Link to="/register" className="regi-link">
+                Register
               </Link>
             </div>
           </div>
         </div>
         <div className="signin2">
-          <img src={Loginart} width="100%" height="100%" alt="aaa" />
+          <img src={Loginart} alt="Login Art" />
         </div>
       </div>
     </div>
