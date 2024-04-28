@@ -11,9 +11,8 @@ import Gallery from "./Base/Gallery";
 import Top from "./Components/Top";
 import Bottom from "./Components/Bottom";
 import QuestionPage from "./Pages/QuestionPage";
-
-
-
+import SelectAnswer from "./Pages/SelectAnswer";
+import AccomQuection from "./Pages/AccomQuection";
 
 
 
@@ -33,6 +32,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/questionPage" element={< QuestionPage/>} />
+          <Route path="/selectanswer" element={<SelectAnswer/>} />
+          <Route path="/accomdanswer" element={<AccomQuection/>} />
         </Routes>
       </BrowserRouter>
       <Bottom />

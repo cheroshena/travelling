@@ -3,7 +3,6 @@ import React from 'react'
 
 function Bottom() {
   return (
-
     <footer className="footer">
     <div className="container">
       <div className="row">
